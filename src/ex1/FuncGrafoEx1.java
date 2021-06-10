@@ -26,20 +26,38 @@ public class FuncGrafoEx1 {
 	private void AeB() {
 		String respDi = "";
 		for (int i = 0; i < m.length; i++) {
+			if (m[i][i] == 0) {
+				for (int j = 0; j < m[0].length; j++) {
+					if (m[i][j] != 0) {
+						// buffer.append("Aresta " + alfabeto[i] + " " +
+						// alfabeto[j] + "\n");
+						// grau[i]++;
+						if ((m[j][i] != 0)) {
+							respDi = "não direcionado";
+							j = m.length;
+							i = m.length;
+						} else {
+							respDi = "dígrafo";
+							j = m.length;
+							i = m.length;
+						}
+					}
+				}
+			} else {
+				respDi = "dígrafo";
+				i = m.length;
+			}
+		}
+
+		for (int i = 0; i < m.length; i++) {
 			for (int j = 0; j < m[0].length; j++) {
 				if (m[i][j] != 0) {
 					buffer.append("Aresta " + alfabeto[i] + " " + alfabeto[j] + "\n");
 					grau[i]++;
-					if (!respDi.equals("não direcionado")) {
-						if ((m[j][i] != 0) || (m[i][i]==1)){
-							respDi = "não direcionado";
-						} else {
-							respDi = "dígrafo";
-						}
-					}
 				}
 			}
 		}
+
 		buffer.append("O grafo é " + respDi + "\n");
 	}
 
