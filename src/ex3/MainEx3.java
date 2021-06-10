@@ -8,7 +8,7 @@ public class MainEx3 {
 
 	public static void main(String[] args){
 		
-		String fileName = "C:/Users/Higur/Desktop/GrafoEx3.txt"; //Caminho do arquivo 
+		String fileName = "C:/Users/breno/Downloads/GrafoEx3.txt"; //Caminho do arquivo 
 		
 		// Formatação do arquivo     A B C D E F G
 	    					//		 0 1 2 3 4 5 6

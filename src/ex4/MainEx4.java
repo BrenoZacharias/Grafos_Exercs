@@ -9,7 +9,7 @@ public class MainEx4 {
 	public static void main(String[] args){
 		
 		
-		String fileName =  "C:/Users/Higur/Desktop/GrafoEx4.txt"; //Caminho do arquivo
+		String fileName =  "C:/Users/breno/Downloads/GrafoEx4.txt"; //Caminho do arquivo
 		
 		try {
 			LerArquivo(fileName);

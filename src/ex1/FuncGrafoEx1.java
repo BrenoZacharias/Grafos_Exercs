@@ -7,9 +7,8 @@ public class FuncGrafoEx1 {
 
 	private final char alfabeto[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
 			'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-	private String respDi = "";
+
 	private String respCo = "";
-	private String respAc = "";
 	private int m[][];
 	private int grau[];
 	StringBuffer buffer;
@@ -32,7 +31,7 @@ public class FuncGrafoEx1 {
 					buffer.append("Aresta " + alfabeto[i] + " " + alfabeto[j] + "\n");
 					grau[i]++;
 					if (!respDi.equals("não direcionado")) {
-						if (m[j][i] != 0) {
+						if ((m[j][i] != 0) || (m[i][i]==1)){
 							respDi = "não direcionado";
 						} else {
 							respDi = "dígrafo";
